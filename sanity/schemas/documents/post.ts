@@ -1,6 +1,6 @@
-import { defineField, defineType } from 'sanity'
+import { defineType, defineField } from 'sanity'
 
-export default defineType({
+export const post = defineType({
   name: 'post',
   title: '文章',
   type: 'document',
@@ -18,12 +18,6 @@ export default defineType({
         source: 'title',
         maxLength: 96
       }
-    }),
-    defineField({
-      name: 'author',
-      title: '作者',
-      type: 'reference',
-      to: { type: 'author' }
     }),
     defineField({
       name: 'mainImage',

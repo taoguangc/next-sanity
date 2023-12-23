@@ -1,19 +1,19 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity'
 
-export default defineType({
+export const category = defineType({
   name: 'category',
-  title: 'Category',
+  title: '分类',
   type: 'document',
   fields: [
     defineField({
       name: 'title',
       title: 'Title',
-      type: 'string',
+      type: 'string'
     }),
     defineField({
       name: 'description',
       title: 'Description',
-      type: 'text',
-    }),
-  ],
+      type: 'text'
+    })
+  ]
 })
